@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Products.module.css'
 import { request } from '../lib/datocms';
 import Link from 'next/link';
+import ProductCard from '../components/products/ProductCard';
 
 export default function Products(props) {
 
@@ -14,17 +15,22 @@ export default function Products(props) {
         {/* {renderMetaTags(startPage.seo.concat(data.site.favicon))} */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className={styles.test}></div>
+      <div className={styles.grid}>
+        {/* <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p> */}
+      </div>
       <h1>
         Products
       </h1>
       {allProducts.map(product =>
-        <div key={product.id} style={{ maxWidth: '400px' }}>
-          <Link href={`/product/${product.id}`}>
-            <img src={product.mainImage.url} alt="" style={{ width: '100%' }} />
-            <h2>{product.name}</h2>
-          </Link>
-          <p>{product.price}</p>
-        </div>)}
+      (
+        <ProductCard key={product.id} product={product} />
+      ))}
     </div>
   )
 }

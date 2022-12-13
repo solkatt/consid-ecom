@@ -8,3 +8,16 @@
   justify-content: top;
   align-items: center;
 }
+
+.grid {
+  border: 2px solid red;
+  /* display: grid; */
+  width: 400px;
+  height: 500px;
+  background: green;
+  /* grid-template-columns: 100px 100px; */
+}
+
+.test {
+  background: red;
+}
