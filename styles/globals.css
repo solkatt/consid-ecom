@@ -1,7 +1,10 @@
-html,
-body {
+* {
   padding: 0;
   margin: 0;
+}
+
+html,
+body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -19,9 +22,10 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: black;
-    /* background: linear-gradient(90deg, #fdcd3b 60%, #ffed4b 20%); */
-    background: #FFFEF6;
+    background: linear-gradient(90deg, #FFFEF6 60%, #F7E7D9 20%);
+    /* background: #FFFEF6; */
   }
 }
