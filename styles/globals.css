@@ -25,7 +25,7 @@ a {
 
   body {
     color: black;
-    background: linear-gradient(90deg, #FFFEF6 60%, #F7E7D9 20%);
-    /* background: #FFFEF6; */
+    /* background: linear-gradient(90deg, #FFFEF6 60%, #F7E7D9 20%); */
+    background: #FFFEF6;
   }
 }

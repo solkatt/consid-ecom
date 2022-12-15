@@ -1,22 +1,3 @@
-
-.main {
-  min-height: calc(100vh - 30px);
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: top;
-  align-items: center;
-}
-
-.container {
-  /* background: teal; */
-  width: 100%;
-  max-width: 1500px;
-  /* padding: 0rem; */
-}
-
-
 .grid {
   border: 2px solid red;
   display: flex;

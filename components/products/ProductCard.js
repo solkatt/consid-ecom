@@ -1,28 +1,40 @@
+import styles from '../../styles/Products.module.css'
 import Link from 'next/link'
+import { useRouter } from 'next/router';
+//redux 
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../../slices/cartSlice'
+
+// components
+import Button from '../Button';
 
 export default function ProductCard({ product }) {
+	const dispatch = useDispatch()
+	const router = useRouter()
+	const handleClick = () => {
+		router.push(`/product/${product.id}`)
+
+	}
 	return (
 		<div
 			key={product.id}
-			style={{
-				maxWidth: '400px',
-				background: 'white',
-				boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px;',
-				margin: '20px',
-				borderRadius: '0 0 30px 30px',
-			}}
+			className={styles.productCard}
 		>
-			<Link href={`/product/${product.id}`}>
-				<img
-					src={product.mainImage.url}
-					alt=''
-					style={{ width: '100%', borderRadius: '20px 20px 0 0' }}
-				/>
+			<img
+				onClick={handleClick}
+				src={product.mainImage.url}
+				alt=''
+				className={styles.productImage}
+			/>
+			<div className={styles.productDetails}>
 				<div style={{ padding: '0.2rem 1rem' }}>
-					<h2>{product.name}</h2>
+					<h2	onClick={handleClick}>{product.name}</h2>
 					<p style={{ marginBottom: '1rem' }}>{product.price}:-</p>
 				</div>
-			</Link>
+				<div>
+					<Button style={{ justifySelf: 'flex-end' }} onClick={() => dispatch(addToCart(product))} >Add to cart</Button>
+				</div>
+			</div>
 		</div>
 	)
 }

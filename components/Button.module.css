@@ -1,0 +1,18 @@
+.button {
+    background: #DC0532;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease-in-out;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover {
+  background: #f5063a;;
+  transform: scale(1.01);
+  transition: all 0.1s ease-in-out;
+}

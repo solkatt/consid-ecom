@@ -1,0 +1,50 @@
+.cartItem {
+  display: flex; 
+  box-shadow: rgba(100,100,100,0.2) 2px 2px 5px;
+  border-radius: 20px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+}
+
+.itemDetails {
+  margin-left: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 1rem .2rem 0.2rem;
+}
+
+.quantity {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.roundBtn {
+  align-self: flex-end;
+  left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  fill: #25515C; 
+  background: white; 
+  transition: all 0.2s ease-in-out;
+}
+
+.roundBtn:hover {
+  /* background: #25515C;  */
+  background: #25515C; 
+  fill: white; 
+  transition: all 0.2s ease-in-out;
+} 
+

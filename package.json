@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@next/font": "^13.0.6",
+    "@reduxjs/toolkit": "^1.9.1",
+    "@svgr/webpack": "^6.5.1",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
     "graphql": "^16.6.0",
@@ -17,6 +19,7 @@
     "next": "13.0.6",
     "react": "18.2.0",
     "react-datocms": "^4.0.7",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-redux": "^8.0.5"
   }
 }
