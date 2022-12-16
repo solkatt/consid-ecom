@@ -20,8 +20,7 @@ export default function Checkout(props) {
 				<div style={{ width: '8rem', marginBottom: '2rem' }}>
 					<SuccessIcon style={{ fill: '#022d41' }} />
 				</div>
-				<p></p>
-				<h2>Thank you for your purchase!</h2>
+				<h2 style={{ textAlign: 'center'}}>Thank you for your purchase!</h2>
 				<div
 					className={styles.reciept}
 				>
