@@ -1,8 +1,27 @@
+.navbar {
+  position: fixed;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+  padding: 0 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFEF6;
+  z-index: 1;
+  box-shadow: rgba(100, 100, 100, 0.1) 0px 3px 10px;
+
+}
+
+
 .link {
-  color:  #022d41;
+  color: #022d41;
   position: relative;
   margin-left: 10px;
-  background: rgba(255,255,255,0);
+  background: rgba(255, 255, 255, 0);
   transition: all 0.3s ease-in-out;
   padding: 0.2rem;
 }
@@ -14,7 +33,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.link:after {    
+.link:after {
   background: none repeat scroll 0 0 transparent;
   bottom: -5px;
   content: "";
@@ -23,25 +42,25 @@
   border-radius: 5px;
   left: 50%;
   position: absolute;
-  background:  #022d41;
+  background: #022d41;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0px;
 }
 
-.link:hover:after { 
-  width: 100%; 
-  left: 0; 
+.link:hover:after {
+  width: 100%;
+  left: 0;
 }
 
 
 .active {
   font-weight: 900;
   position: relative;
-  color:  #022d41;
+  color: #022d41;
   margin-left: 10px;
 }
 
-.active:after {    
+.active:after {
   background: none repeat scroll 0 0 transparent;
   bottom: -5px;
   content: "";
@@ -50,28 +69,53 @@
   border-radius: 5px;
   left: 50%;
   position: absolute;
-  background:  #022d41;
+  background: #022d41;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 100%;
   left: 0;
 }
 
-.mobileshow { 
-  display:none; 
-  }
+.linkMobile {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  row-gap: 2rem;
+}
+
+.logo {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #022d41;
+  border-radius: 50%;
+  padding: .5rem;
+}
+
+.mobileshow {
+  display: none;
+}
 
 
 @media screen and (max-width: 600px) {
-  .mobileshow { 
-  display:block; }
+  .mobileshow {
+    display: block;
+  }
 }
 
-.desktopshow { 
-  display:none; 
-  }
+.desktopshow {
+  display: none;
+}
 
 
 @media screen and (min-width: 600px) {
-  .desktopshow { 
-  display:block; }
+  .desktopshow {
+    display: block;
+  }
 }

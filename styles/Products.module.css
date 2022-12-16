@@ -1,4 +1,3 @@
-
 .container {
   /* background: teal; */
   width: 100%;
@@ -30,16 +29,14 @@
 .productCard {
   max-width: 400px;
   background: white;
-  box-shadow: rgba(100,100,100,0.2) 2px 2px 5px;
+  box-shadow: rgba(100, 100, 100, 0.2) 2px 2px 5px;
   margin: 20px;
   border-radius: 30px;
   transition: all 0.1s ease-in-out;
 }
 
 .productCard:hover {
-  max-width: 400px;
-  background: white;
-  box-shadow: rgba(100,100,100,0.2) 3px 3px 10px;
+  box-shadow: rgba(100, 100, 100, 0.2) 3px 3px 10px;
   transform: scale(1.01);
   transition: all 0.1s ease-in-out;
 }
@@ -47,15 +44,20 @@
 .productImage {
   width: 100%;
   border-radius: 20px 20px 0 0;
-  filter:saturate(0.6);
   cursor: pointer;
 }
 
 .productDetails {
   display: flex;
+  flex: 1;
+  /* height: 7rem; */
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
+}
+
+.title {
+  font-size: clamp(1rem, 2vw, 4rem);
 }
 
 @media only screen and (max-width: 720px) {

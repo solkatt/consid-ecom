@@ -1,5 +1,4 @@
 .grid {
-  border: 2px solid red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -10,31 +9,29 @@
 
 .title {
   max-width: 700px;
-  border: 2px solid green;
   flex: 1;
   /* font-family: 'Lora', serif; */
 }
 
 .title>h1 {
- 
   font-size: clamp(1rem, 5vw, 5rem);
   font-weight: 600;
+  margin-bottom: 3rem;
 }
+
 .content {
   font-size: clamp(1rem, 1vw, 1.2rem);
-  border: 2px solid orange;
-
 }
 
 .imageWrapper {
- display: flex;
- justify-content: center;
- align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* width: '800px'; */
 }
 
 .mainImage {
-  width: 80%;
+  width: 65vh;
   max-height: 800px;
   border-radius: 80px;
   aspect-ratio: 5 / 6;
@@ -44,7 +41,7 @@
 
 
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1000px) {
 
   .grid {
     flex-direction: column;
@@ -56,22 +53,27 @@
     max-width: 1000px;
   }
 
+  .title>h1 {
+    margin-bottom: 2rem;
+
+  }
+
   .imageWrapper {
     justify-content: center;
     /* width: 100%; */
     /* max-height: 200px; */
     order: 0;
 
-     /* width: '800px'; */
-   }
+    /* width: '800px'; */
+  }
 
-   .mainImage {
+  .mainImage {
     width: 100%;
     max-width: 1000px;
     border-radius: 30px 30px 0 0;
     aspect-ratio: 10 / 6;
-  
+
   }
-  
-  
+
+
 }

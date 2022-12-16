@@ -8,12 +8,13 @@
 
 
 .title {
+  /* width: 50%; */
   max-width: 800px;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
- 
+
   /* font-family: 'Lora', serif; */
 }
 
@@ -35,6 +36,7 @@
 }
 
 .imageWrapper {
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,9 +46,9 @@
 }
 
 .mainImage {
-  max-height: 70vh;
+  max-height: 80vh;
   width: 80%;
-  border-radius: 80px;
+  border-radius: 30px;
   /* aspect-ratio: 5 / 6; */
   object-fit: cover;
 }
@@ -58,17 +60,16 @@
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: flex-start;
-  /* background: red; */
 }
+
 .altImages {
   width: 32%;
-  border-radius: 30px;
-  /* background: red; */
+  border-radius: 10px;
 }
 
 
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1000px) {
 
   .grid {
     flex-direction: column;
@@ -82,7 +83,7 @@
 
   .imageWrapper {
     justify-content: center;
-    /* width: 100%; */
+    width: 100%;
     /* max-height: 200px; */
     order: 0;
 
@@ -91,21 +92,21 @@
 
   .mainImage {
     width: 100%;
-    max-width: 1000px;
+    /* max-height: 60vh; */
     border-radius: 30px 30px 0 0;
-    aspect-ratio: 10 / 6;
+    /* aspect-ratio: 10 / 6; */
 
   }
 
-  
-.altImagesWrapper {
-  width: 100%;
-  /* background: red; */
-}
 
-.altImages {
-  border-radius: 5px;
-  /* background: red; */
-}
+  .altImagesWrapper {
+    width: 100%;
+    /* background: red; */
+  }
+
+  .altImages {
+    border-radius: 5px;
+    /* background: red; */
+  }
 
 }
