@@ -23,16 +23,16 @@ export default function Product({ data }) {
 			<div className={styles.grid}>
 				<div className={styles.title}>
 					<h1>{product.name}</h1>
+					<p className={styles.price}>{product.price}:-</p>
 					<div style={{ marginTop: '50px' }}>
 						<Link href='/products'>
 							<div style={{ height: '.1rem' }}>
-						
+
 							</div>
 						</Link>
 					</div>
 					<div className={styles.content}>
 						<StructuredText data={product.description.value} />
-						<p className={styles.price}>{product.price}:-</p>
 					</div>
 					<Button onClick={() => dispatch(addToCart(product))}>Add to cart</Button>
 				</div>
@@ -45,7 +45,7 @@ export default function Product({ data }) {
 
 					<div className={styles.altImagesWrapper}>
 						{product.alternativeImages.map((altImg) => (
-							<img src={altImg.url} alt='' className={styles.altImages} />
+							<img key={altImg.id}src={altImg.url} alt='' className={styles.altImages} />
 						))}
 					</div>
 				</div>

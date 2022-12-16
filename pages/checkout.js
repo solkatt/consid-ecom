@@ -1,54 +1,33 @@
+import styles from '../styles/Checkout.module.css'
 import { useRouter } from 'next/router'
-import Layout from '../components/Layout'
+//icons
 import SuccessIcon from '../assets/success.svg'
+
+// components
+import Layout from '../components/Layout'
 
 export default function Checkout(props) {
 	const router = useRouter()
-	console.log(router.query)
-
 	const products = router.query?.products
 		? JSON.parse(router.query?.products)
 		: []
 
-	const { total } = router.query || 0
-	console.log(products)
+	const { total } = router?.query || 0
 
 	return (
 		<Layout title={Checkout}>
-			<div
-				style={{
-					display: 'flex',
-					flexDirection: 'column',
-					alignItems: 'center',
-					justifyContent: 'center',
-				}}
-			>
-				<div style={{ width: '8rem' }}>
+			<div className={styles.container}>
+				<div style={{ width: '8rem', marginBottom: '2rem' }}>
 					<SuccessIcon style={{ fill: '#022d41' }} />
 				</div>
 				<p></p>
 				<h2>Thank you for your purchase!</h2>
 				<div
-					style={{
-						width: '80%',
-						maxWidth: '500px',
-						background: 'white',
-						padding: '1rem',
-						borderRadius: '10px',
-						boxShadow: 'rgba(100,100,100,0.2) 2px 2px 5px',
-						marginTop: '3rem',
-					}}
+					className={styles.reciept}
 				>
 					<h3>Reciept</h3>
 					<div
-						style={{
-							display: 'grid',
-							alignSelf: 'center',
-							gridTemplateColumns: '2fr 1fr 1fr',
-							gridTemplateRows: 'auto',
-							borderBottom: '1px solid black',
-							marginTop: '2rem',
-						}}
+						className={styles.recieptGrid}
 					>
 						{products.map((product) => (
 							<>
@@ -61,7 +40,12 @@ export default function Checkout(props) {
 						))}
 					</div>
 
-					<p style={{ textAlign: 'right' }}>{total}:-</p>
+					<p style={{ marginTop: '1rem', textAlign: 'right', fontSize: '1.2rem' }}>
+						{`Total `}
+						 <span style={{fontWeight: 'bold'}}>
+						{total}:-
+						</span>
+						</p>
 				</div>
 			</div>
 		</Layout>

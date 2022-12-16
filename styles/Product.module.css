@@ -20,7 +20,7 @@
 
 .title>h1 {
 
-  font-size: clamp(1rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 600;
   /* margin-bottom: 1rem; */
 }
@@ -31,8 +31,8 @@
 }
 
 .price {
-  margin-top: 2rem;
-  font-size: 2.5rem;
+  margin-top: .5rem;
+  font-size: 1.5rem;
 }
 
 .imageWrapper {
